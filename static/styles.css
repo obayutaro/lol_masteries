@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0A0A0A; /* Dark background color */
+    margin: 0;
+    padding: 0;
+    color: #14c4b5; /* Light gray text color for readability */
+}
+
+h1 {
+    text-align: center;
+    color: #FFD700; /* Gold color for headers */
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    margin: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #14c4b5; /* Gold color for links */
+}
+
+a:hover {
+    color: #FFFFFF; /* White color on hover */
+}
+
+.top-page .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.top-page .input-group select,
+.top-page .input-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none; /* Remove the border */
+    margin-right: 0px; /* Provide space between elements */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+.top-page .input-group input:focus,
+.top-page .input-group select:focus {
+    outline: none; /* Remove the outline on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: add subtle shadow on focus */
+}
+.top-page .input-group input {
+    flex: 1;
+}
+.top-page .input-group button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #FFD700;
+    color: #0A0A0A;
+    cursor: pointer;
+    margin-left: 0px; /* Provide space between elements */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+.top-page .input-group button:hover {
+    background-color: #FFB700;
+}
+.top-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.top-page .input-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+img.champion-icon {
+    border-radius: 10px;
+    width: 80px; /* Smaller size for champion icons */
+    height: 80px;
+    border: 2px solid #FFD700; /* Gold border for champion icons */
+}
+
+img.skin-image {
+    border-radius: 10px;
+    width: 200px; /* Larger size for skin images */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image aspect ratio is maintained */
+}
+
+.champion-name {
+    font-size: 10px; /* Smaller font size for champion names */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80px; /* Same width as the icon to ensure consistent truncation */
+}
+
+.mastery_level{
+    text-align: center;
+    font-size: 30px;
+    color: #14c4b5;
+}
+
+.owned {
+    filter: brightness(1.3);
+    padding: 5px;
+}
+
+.not-owned {
+    filter: brightness(0.3);
+    border: 5px solid transparent; /* No border for not owned skins */
+    padding: 5px;
+}
+
+.container {
+    max-width: 90%; /* Increased max-width to use more screen space */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1A1A1A; /* Darker background for container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* More subtle shadow */
+    border-radius: 10px;
+}
+
+h1, ul {
+    margin-bottom: 20px;
+}

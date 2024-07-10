@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ champion_id }} Details</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ champion_id }} Details</h1>
+        {% if mastery_level %}
+        <p class="mastery_level">Mastery Level : {{ mastery_level }}</p>
+        {% else %}
+        <p class="mastery_level"><a href="{{ url_for('top') }}" target="_blank">Mastery Level : 取得できませんでした。トップページに戻る</a></p>
+        {% endif %}
+
+        <h2>チャンピオンの詳細</h2>
+        <p><strong>タグ:</strong> {{ details.tags | join(', ') }}</p>
+        <p><strong>リソースタイプ:</strong> {{ details.resource_type }}</p>
+
+        <h3>ステータス</h3>
+        <ul>
+            {% for stat_name, stat_value in details.stats.items() %}
+            <li>{{ stat_name }}: {{ stat_value }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>アビリティ</h3>
+        <ul>
+            {% for ability, ability_name in details.abilities.items() %}
+            <li>{{ ability }}: {{ ability_name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

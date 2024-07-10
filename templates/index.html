@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Champion List</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Champion List</h1>
+        <ul>
+            {% for champion_key, champion_id, champion_name in champions %}
+            <li>
+                <a href="{{ url_for('champion', champion_id=champion_id, champion_key=champion_key) }}" target="_blank">
+                    <img class="champion-icon" src="https://ddragon.leagueoflegends.com/cdn/11.1.1/img/champion/{{ champion_id }}.png" alt="{{ champion_name }}">
+                    <div class="champion-name">{{ champion_name[:5] }}</div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

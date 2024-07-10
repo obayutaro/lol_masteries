@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="top-page">
+    <div class="container">
+        <h1>lol serching my skin - Top</h1>
+        <form method="POST" action="{{ url_for('set_user') }}">
+            <div class="input-container">
+                <div class="input-group">
+                    <select id="platform" name="platform" required>
+                        <option value="br1">BR1</option>
+                        <option value="eun1">EUN1</option>
+                        <option value="euw1">EUW1</option>
+                        <option value="jp1">JP1</option>
+                        <option value="kr">KR</option>
+                        <option value="la1">LA1</option>
+                        <option value="la2">LA2</option>
+                        <option value="na1">NA1</option>
+                        <option value="oc1">OC1</option>
+                        <option value="tr1">TR1</option>
+                        <option value="ru">RU</option>
+                        <option value="ph2">PH2</option>
+                        <option value="sg2">SG2</option>
+                        <option value="th2">TH2</option>
+                        <option value="tw2">TW2</option>
+                        <option value="vn2">VN2</option>
+                    </select>
+                    <input type="text" id="summoner_name" name="summoner_name" placeholder="サモナーネーム" required>
+                    <input type="text" id="tagline" name="tagline" placeholder="タグライン" required>
+                    <button type="submit">検索</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
